@@ -1,0 +1,84 @@
+/* Main styles for all pages */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    padding: 20px;
+    margin-top: 60px; /* Adiciona um espaço para o navbar fixo */
+}
+
+h1, h2 {
+    color: #333;
+}
+
+p {
+    color: #666;
+}
+
+/* Hero Section */
+#hero {
+    background: #007bff; /* Azul Bootstrap */
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+#hero .hero-content h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+#hero .hero-content p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+#hero .btn-primary {
+    background: #ffc107; /* Amarelo Bootstrap */
+    color: #333;
+    padding: 15px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#hero .btn-primary:hover {
+    background: #e0a800;
+}
+
+/* Features Section */
+#features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.feature {
+    background: #f8f9fa; /* Cinza claro Bootstrap */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 10px 0;
+}
+
+.feature-icon img {
+    width: 50px;
+    height: 50px;
+}
+
+.feature h2 {
+    color: #333;
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.feature p {
+    color: #555;
+}

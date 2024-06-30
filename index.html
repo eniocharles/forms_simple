@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+</head>
+
+<body>
+    <!-- Include Navbar -->
+    <div id="navbar"></div>
+
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('navbar').innerHTML = data);
+    </script>
+
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h1>Bem-vindo ao ProjetoX!</h1>
+                <p>Organize seus contatos com facilidade usando nossa agenda telefônica.</p>
+                <a href="contatos.html" class="btn-primary">Comece Agora</a>
+            </div>
+        </section>
+
+        <section id="features">
+            <div class="feature">
+                <div class="feature-icon">
+                    <img src="img/botao-de-inicio.png" alt="Feature 1">
+                </div>
+                <h2>Fácil de Usar</h2>
+                <p>Adicione, visualize e gerencie seus contatos de forma simples e intuitiva.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">
+                    <img src="img/botao-de-inicio.png" alt="Feature 2">
+                </div>
+                <h2>Organização Eficiente</h2>
+                <p>Visualize todos os seus contatos em uma tabela bem organizada.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">
+                    <img src="img/botao-de-inicio.png" alt="Feature 3">
+                </div>
+                <h2>Armazenamento Local</h2>
+                <p>Seus contatos são salvos no armazenamento local do navegador.</p>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

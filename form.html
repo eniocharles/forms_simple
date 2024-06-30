@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+
+<body>
+    <!-- Include Navbar -->
+    <div id="navbar"></div>
+
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('navbar').innerHTML = data);
+    </script>
+
+    <h1>Cadastrar Novo Contato</h1>
+    <form id="contactForm">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="Phone">número:</label>
+        <input type="text" id="phone" name="phone" required>
+
+        <label for="description">Descrição:</label>
+        <textarea id="description" name="description" required></textarea>
+
+        <button type="submit">ADICIONAR</button>
+    </form>
+
+    <script scr='script/main.js'></script>
+</body>
+
+</html>
