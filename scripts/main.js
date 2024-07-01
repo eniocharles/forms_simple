@@ -48,7 +48,11 @@ function addContactToTable(contact) {
 
     const actionCell = document.createElement('td');
     const deleteBtn = document.createElement('button');
-    deleteBtn.textContent = 'Excluir';
+    const trashIcon = document.createElement('img');
+    trashIcon.src = 'img/trash.png';
+    trashIcon.alt = 'Excluir';
+    trashIcon.classList.add('trash-icon');
+    deleteBtn.appendChild(trashIcon);
     deleteBtn.classList.add('delete-btn');
     deleteBtn.onclick = function() {
         deleteContact(contact, row);

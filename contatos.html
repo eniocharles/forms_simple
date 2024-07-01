@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contatos</title>
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/contatos.css">
 </head>
 
 <body>
@@ -17,7 +18,7 @@
             .then(data => document.getElementById('navbar').innerHTML = data);
     </script>
 
-    <h1>Cadastrar Novo Contato</h1>
+    <h1>Lista de Contatos</h1>
     <form id="contactForm">
         <label for="name">Nome:</label>
         <input type="text" id="name" name="name" required>
@@ -30,24 +31,20 @@
 
         <button type="submit">Adicionar</button>
     </form>
-
-    <h1>Lista de Contatos</h1>
     <table id="contactTable">
         <thead>
             <tr>
                 <th>Nome</th>
                 <th>Telefone</th>
                 <th>Descrição</th>
-                <th>Data de Adição</th>
-                <th>Ações</th>
+                <th>Data</th>
+                <th>Ação</th>
             </tr>
         </thead>
         <tbody>
         </tbody>
     </table>
-
     <script src="scripts/main.js"></script>
-    <script src="scripts/contatos.js"></script>
 </body>
 
 </html>
