@@ -1,84 +1,122 @@
-/* Main styles for all pages */
+/* Cores da paleta */
+:root {
+    --primary-color: #ADD8E6;
+    --dark-color: #00008B;
+    --light-color: #E0FFFF;
+    --text-color: #000000;
+}
+
+/* Estilos Globais */
 body {
     font-family: Arial, sans-serif;
+    background-color: var(--light-color);
+    color: var(--text-color);
     margin: 0;
     padding: 0;
 }
 
-main {
-    padding: 20px;
-    margin-top: 60px; /* Adiciona um espaço para o navbar fixo */
-}
-
-h1, h2 {
-    color: #333;
-}
-
-p {
-    color: #666;
-}
-
-/* Hero Section */
-#hero {
-    background: #007bff; /* Azul Bootstrap */
-    color: #fff;
-    padding: 60px 20px;
+h1, p {
     text-align: center;
-    border-radius: 8px;
 }
 
-#hero .hero-content h1 {
-    font-size: 2.5em;
+/* Navbar */
+nav {
+    background-color: var(--primary-color);
+    padding: 1rem;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
     margin: 0;
+    display: flex;
+    justify-content: center;
 }
 
-#hero .hero-content p {
-    font-size: 1.2em;
-    margin: 10px 0;
+nav ul li {
+    margin: 0 1rem;
 }
 
-#hero .btn-primary {
-    background: #ffc107; /* Amarelo Bootstrap */
-    color: #333;
-    padding: 15px 25px;
-    border-radius: 5px;
+nav ul li a {
     text-decoration: none;
+    color: var(--text-color);
     font-weight: bold;
 }
 
-#hero .btn-primary:hover {
-    background: #e0a800;
+nav ul li a img {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
 }
 
-/* Features Section */
-#features {
+/* Formulário */
+form {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin: 20px 0;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
 }
 
-.feature {
-    background: #f8f9fa; /* Cinza claro Bootstrap */
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    width: 30%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin: 10px 0;
+form label {
+    margin-top: 1rem;
 }
 
-.feature-icon img {
-    width: 50px;
-    height: 50px;
+form input, form textarea {
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid var(--dark-color);
+    border-radius: 4px;
+    width: 80%;
+    max-width: 400px;
 }
 
-.feature h2 {
-    color: #333;
-    font-size: 1.5em;
-    margin: 10px 0;
+form button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
-.feature p {
-    color: #555;
+form button:hover {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+}
+
+/* Tabela */
+table {
+    width: 80%;
+    margin: 2rem auto;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid var(--dark-color);
+}
+
+th, td {
+    padding: 0.5rem;
+    text-align: left;
+}
+
+th {
+    background-color: var(--primary-color);
+}
+
+td {
+    background-color: var(--light-color);
+}
+
+td .delete-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+}
+
+td .delete-btn:hover {
+    background-color: darkred;
 }

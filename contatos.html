@@ -6,61 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contatos</title>
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/contatos.css">
-    <link rel="stylesheet" href="styles/navbar.css">
 </head>
 
 <body>
     <!-- Include Navbar -->
     <div id="navbar"></div>
-
     <script>
         fetch('navbar.html')
             .then(response => response.text())
             .then(data => document.getElementById('navbar').innerHTML = data);
     </script>
 
-    <main>
-        <h1>Contatos</h1>
+    <h1>Cadastrar Novo Contato</h1>
+    <form id="contactForm">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required>
 
-        <!-- Contact Form -->
-        <section id="contactFormSection">
-            <h2>Adicionar Contato</h2>
-            <form id="contactForm">
-                <label for="name">Nome:</label>
-                <input type="text" id="name" name="name" required>
+        <label for="phone">Número:</label>
+        <input type="text" id="phone" name="phone" required>
 
-                <label for="phone">Número:</label>
-                <input type="text" id="phone" name="phone" required>
+        <label for="description">Descrição:</label>
+        <textarea id="description" name="description" required></textarea>
 
-                <label for="description">Descrição:</label>
-                <textarea id="description" name="description" required></textarea>
+        <button type="submit">Adicionar</button>
+    </form>
 
-                <button type="submit">Adicionar</button>
-            </form>
-        </section>
+    <h1>Lista de Contatos</h1>
+    <table id="contactTable">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Telefone</th>
+                <th>Descrição</th>
+                <th>Data de Adição</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
 
-        <!-- Contact Table -->
-        <section id="contactTableSection">
-            <h2>Lista de Contatos</h2>
-            <table id="contactTable">
-                <thead>
-                    <tr>
-                        <th>Nome</th>
-                        <th>Telefone</th>
-                        <th>Descrição</th>
-                        <th>Data Adicionada</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- As linhas da tabela serão adicionadas aqui pelo JavaScript -->
-                </tbody>
-            </table>
-        </section>
-    </main>
-
-    <script src="scripts/contatos.js"></script>
     <script src="scripts/main.js"></script>
+    <script src="scripts/contatos.js"></script>
 </body>
 
 </html>
